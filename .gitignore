@@ -1,0 +1,11 @@
+# Terraform
+**/.terraform
+**/*.tfstate*
+crash.log
+**/.*.*.hcl
+
+# InteliJ IDE
+.idea/
+
+# Taskfile
+.task/
