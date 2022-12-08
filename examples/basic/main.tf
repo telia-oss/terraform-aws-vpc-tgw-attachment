@@ -6,12 +6,11 @@ provider "aws" {
   region = var.region
 }
 
-module "template" {
-  source      = "../../"
-  name_prefix = var.name_prefix
+module "vpc_tgw_attachment" {
 
-  tags = {
-    environment = "dev"
-    terraform   = "True"
-  }
+  source = "github.com/telia-oss/terraform-aws-vpc-tgw-attachment"
+  vpc_id = module.vpc.vpc
+  tgw_subnets = module.vpc.private_subnets
+  tgw_subnets_route_tables = module.vpc.private_subnets_rtb
 }
+
