@@ -1,7 +1,7 @@
 
 locals {
 
- asn  = "${data.aws_region.current.id == "eu-north-1" ? "64517" : (data.aws_region.current.id == "eu-west-1" ? "64513" : false)}"
+  asn = data.aws_region.current.id == "eu-north-1" ? "64517" : (data.aws_region.current.id == "eu-west-1" ? "64513" : false)
 }
 
 resource "aws_ec2_transit_gateway_vpc_attachment" "tgw_attachment" { #how to choose between ireland and stockholm
