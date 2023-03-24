@@ -13,7 +13,3 @@ output "tgw_attachment_vpc_id" {
 output "tgw_attachment_tgw_id" {
   value = aws_ec2_transit_gateway_vpc_attachment.tgw_attachment.transit_gateway_id
 }
-
-output "tgw_attachment_route_table_ids" {
-  value = aws_ec2_transit_gateway_vpc_attachment.tgw_attachment.route_table_ids
-}
