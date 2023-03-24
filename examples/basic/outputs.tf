@@ -1,3 +1,3 @@
-output "name_prefix" {
-  value = module.template.name_prefix
+output "vpc_id" {
+  value = module.vpc.vpc_id
 }
